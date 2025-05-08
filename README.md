@@ -163,8 +163,6 @@ sidebar.
 -   [ ] Automate set of tests to barrage any new or modified
     documentation page with to increase quality and readability.
 
-![Application Screenshot](dat/screenshot2.png)
-
 
 [1]: https://github.com/Arize-ai/phoenix/tree/1c1e49352eadbbf8be157cd99b1d36b23f884ba7/docs
 [2]: https://huggingface.co/spaces/mteb/leaderboard
