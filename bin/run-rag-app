@@ -1,0 +1,20 @@
+#!/bin/bash
+env_file=${1:-"etc/localdev.env"}
+cmd=(
+  venv-arize-ai-rag-app/bin/streamlit
+  run
+  src/app.py
+)
+if [[ -f "$env_file" ]]; then
+  venv-arize-ai-rag-app/bin/dotenv -f "$env_file" run -- ${cmd[@]}
+else
+  cat << __EOF 
+[1;33m
+  Running app without environment exported
+  ++++++++++++++++++++++++++++++++++++++++++++
+  Be sure to pass gemini key within streamlit!
+  ++++++++++++++++++++++++++++++++++++++++++++
+[0m
+__EOF
+  ${cmd[@]}
+fi

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+github_url="https://github.com/Arize-ai/phoenix"
+target="dat/phx-docs"
+git_opts=(
+  clone
+  -n 
+  --depth=1
+  --filter=tree:0
+  -b docs
+  --single-branch
+  "$github_url"
+  "$target"
+)
+# create empty directory, init. git, 
+# specify filetree manifest in sparse-checkout config
+# https://stackoverflow.com/a/52269934
+git "${git_opts[@]}"
+cd "$target"
+git sparse-checkout set --no-cone /docs
+git checkout

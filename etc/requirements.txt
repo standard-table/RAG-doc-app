@@ -1,0 +1,11 @@
+## easy UI
+streamlit
+## easy gemini API
+google-generativeai
+## RAG and embeddings
+llama-index
+llama-index-embeddings-huggingface
+sentence-transformers
+## streamlit support
+# monitors FS changes, allows streamlit to update w/o restart
+watchdog

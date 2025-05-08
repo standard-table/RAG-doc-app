@@ -1,0 +1,12 @@
+#!/bin/bash
+cd dat
+if [[ -d phx-docs ]]; then
+  cat << __EOF
+[1;31m
+Giving up since directory, dat/phx-docs, exists
+[0m
+__EOF
+else
+  zstd -dcf phx-docs.md-only.tar.zst \
+    | tar x
+fi

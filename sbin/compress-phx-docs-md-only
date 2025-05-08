@@ -1,0 +1,4 @@
+#!/bin/bash
+cd dat
+tar c $(find phx-docs -type f -iname '*.md'|sort) \
+  | zstd --ultra -22 -o phx-docs.md-only.tar.zst
