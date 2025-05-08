@@ -21,19 +21,19 @@ This application demonstrates a Retrieval Augmented Generation (RAG) setup using
 
 ```
 .
-├── bin/
+├── bin/                   ## Application executables
 │   └── run-rag-app         # Script to run the Streamlit application
-├── dat/
+├── dat/                   ## Data direcotry
 │   └── phx-docs/           # Target directory for Phoenix documentation (populated by script)
-│       └── docs/             # Markdown files for Phoenix
-├── etc/
+│       └── docs/           # Markdown files for Phoenix
+├── etc/                   ## System (repo) configuration directory
 │   ├── localdev.env        # Template for environment variables (e.g., GOOGLE_API_KEY)
 │   └── requirements.txt    # Python dependencies
-├── sbin/
-│   ├── clone-phx-docs      # Script to download/clone Phoenix documentation
-│   ├── mkpyenv             # Script to create Python virtual environment & install deps
-│   └── source-python-venv  # Helper to source the virtual environment (not directly run)
-├── src/
+├── sbin/                  ## System (repo) utilities and conf. executables
+│   ├── init-full.sh        # Main script to initialize stack
+│   ├── source-python-venv  # Helper utility for local env dev., not recommended (source it)
+│   └── ...                 # Unit utilities for stack initialization
+├── src/                   ## Application source code
 │   └── app.py              # Main Streamlit application code
 └── README.md               # This file
 ```
